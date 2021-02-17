@@ -1,0 +1,14 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.headerBackground {
+    background-color:coral;
+}
+
+header {
+    font-size: 100px;
+    color: white;
+    padding: 1%;
+}
