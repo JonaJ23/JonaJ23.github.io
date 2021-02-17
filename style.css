@@ -12,3 +12,41 @@ header {
     color: white;
     padding: 1%;
 }
+
+/* MENU BAR */
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    width: auto;
+  }
+  
+  li {
+    float: left;
+  }
+  
+  li, a {
+    display: block;
+    padding: 8px;
+    background-color: #dddddd;
+  }
+
+  img {
+    padding: 0;
+    margin: 0;
+    max-width: 400px;
+  }
+
+  .posts {
+    display: flex;
+    justify-content: center;
+  }
+
+  .newpost {
+    max-width: 400px;
+    background: #ffffff;
+    border: 1px solid;
+    box-shadow: 1px;
+    padding: 25px;
+  }
