@@ -13,34 +13,98 @@
     padding: 1%;
   }
 
-/* MENU BAR */
-ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    width: auto;
-  }
-  
- li {
-    float: left;
-  }
-  
-  li, a {
-    color: white;
-    display: block;
-    font-size: 30px;
-    padding: 15px 14px;
-    background-color: #1a1a1a;
-    text-decoration: none;
-    text-align: center;
+  /* MENU BAR */
+  .header-navbar{
+    background-color: #2b2b2b;
   }
 
-  li a:hover {
+  .navbar {
+    color: #fefefe;
+    max-width: 1200px;
+    overflow-x: hidden;
+    -ms-overflow-style: none;
+    white-space: nowrap;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    height: 60px;
+  }
+
+  .navtext {
+    align-items: center;
+    display: flex;
+    padding: 0px 20px;
+    font-size: 30px;
+  }
+
+  .navtext:hover {
+    background-color: #030303;
+    cursor: pointer;
+  }
+
+  a {
+    color: white;
+    text-decoration: none;  
+  }
+
+
+
+
+
+  .dropdown {
+    float: left;
+    overflow: hidden;
+  }
+
+  .dropdown .dropbtn {
+    font-size: 30px;
+    border: none;
+    outline: none;
+    color: white;
+    padding: 14px 16px;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;
+  }
+
+  .navbar a:hover, .dropdown:hover .dropbtn {
     background-color: #030303;
   }
 
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 190px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+
+  .dropdown-content a {
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+  }
   
+  .dropdown-content a:hover {
+    background-color: #ddd;
+  }
+  
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+
+
+
+  
+
+  /* POST */
 
   img {
     padding: 0;
@@ -61,7 +125,7 @@ ul {
     padding: 25px;
   }
 
-.footer {
-  margin-top: 11%;
-  font-size: 20px;
-}
+  .footer {
+    margin-top: 11%;
+    font-size: 20px;
+  }
