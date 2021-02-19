@@ -13,7 +13,11 @@
     padding: 1%;
   }
 
+
+
+
   /* MENU BAR */
+
   .header-navbar{
     background-color: #2b2b2b;
   }
@@ -53,6 +57,8 @@
 
 
 
+
+  /* DROPDOWN */
 
   .dropdown {
     float: left;
@@ -129,3 +135,11 @@
     margin-top: 11%;
     font-size: 20px;
   }
+
+
+
+
+
+
+
+ 
