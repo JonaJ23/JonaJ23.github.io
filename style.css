@@ -11,37 +11,27 @@
     font-size: 100px;
     color: white;
     padding: 1%;
+    text-align: center;
   }
 
 
-
-
+  
   /* MENU BAR */
-
   .header-navbar{
     background-color: #2b2b2b;
   }
 
   .navbar {
     color: #fefefe;
-    max-width: 1200px;
-    overflow-x: hidden;
-    -ms-overflow-style: none;
-    white-space: nowrap;
     display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-    -webkit-flex-direction: row;
-    -ms-flex-direction: row;
-    flex-direction: row;
-    height: 60px;
   }
 
   .navtext {
     align-items: center;
     display: flex;
-    padding: 0px 20px;
+    padding: 0px 40px;
     font-size: 30px;
+    margin-left: auto;
   }
 
   .navtext:hover {
@@ -54,16 +44,19 @@
     text-decoration: none;  
   }
 
+  .contact {
+    align-items: center;
+    display: flex;
+    padding: 0px 20px;
+    font-size: 30px;
+    margin-left: auto;
+  }
+
 
 
 
 
   /* DROPDOWN */
-
-  .dropdown {
-    float: left;
-    overflow: hidden;
-  }
 
   .dropdown .dropbtn {
     font-size: 30px;
@@ -73,7 +66,6 @@
     padding: 14px 16px;
     background-color: inherit;
     font-family: inherit;
-    margin: 0;
   }
 
   .navbar a:hover, .dropdown:hover .dropbtn {
@@ -107,7 +99,6 @@
   }
 
 
-
   
 
   /* POST */
@@ -135,11 +126,3 @@
     margin-top: 11%;
     font-size: 20px;
   }
-
-
-
-
-
-
-
- 
