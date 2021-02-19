@@ -8,7 +8,7 @@
     <title>Document</title>
 </head>
 <body>
-    <div class="headerBackground"><header>GAMER NEWS</header></div>
+    <div class="headerBackground"><header>DOGS</header></div>
 
       <div class="header-navbar">
         <nav class="navbar">
@@ -17,23 +17,61 @@
           <div class="dropdown">
             <button class="dropbtn">Social Media</button>
             <div class="dropdown-content">
-              <a href="#">Facebook</a>
-              <a href="#">Twitter</a>
-              <a href="#">Reddit</a>
+              <a href="https://www.facebook.com/">Facebook</a>
+              <a href="https://twitter.com/">Twitter</a>
+              <a href="https://www.reddit.com/">Reddit</a>
             </div>
           </div>
           <a class="navtext" href="contact.html">Contact</a>
         </nav>
       </div>
 
-        <div class="posts">
-          <div class="newpost">
-            <img src="https://static0.gamerantimages.com/wordpress/wp-content/uploads/2020/05/sims-4-header.jpg" alt="">
-            <h3>NEW SIMS GAME ON THE WAY</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum temporibus sed voluptatum exercitationem tenetur asperiores qui hic vero, minus impedit, sequi aliquam! Vel blanditiis iusto consequatur molestias possimus autem, deleniti id magni amet quos tenetur distinctio quisquam dolores debitis illum!</p>
+      <div class="code-wrapper">
+        <span class="code"></span>
+        <button onclick="javascript:void(0)" class="get-dog button">Fetch doggy!</button>
+      </div>
+
+      <div class="try">
+          <div class="image">
+            <h4>Image</h4>
+            <div class="image-content"></div>
           </div>
       </div>
+
+
+      
+
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" 
+      integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" 
+      crossorigin="anonymous">
+      </script>
+      <script>
+        if (typeof jQuery == 'undefined') {
+            document.write(unescape("%3Cscript src='/js/vendor/jquery-3.4.1.min.js' type='text/javascript'%3E%3C/script%3E"));
+        }
+      </script>
+      <script>
+        function getDog(){
+            $.getJSON("https://dog.ceo/api/breeds/image/random", function( data ) {
+                $(".json pre").html(JSON.stringify(data, null, 4));
+                $(".image-content").html("<img src='" + data.message + "'>");
+            });
+        }
+        $('.get-dog').click(function(){
+            getDog();
+        });
+
+        $(document).ready(function() {
+            getDog();
+        });
+      </script>
+
+
+
+
+
       <footer><a class="footer" href="https://github.com/JonaJ23/JonaJ23.github.io">Github Repository</a></footer>
+
     <script src="script.js"></script>
 </body>
 </html>
