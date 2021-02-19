@@ -1,142 +1,155 @@
-  body {
-    margin: 0;
-    padding: 0;
-  }
+body {
+  margin: 0;
+  padding: 0;
+  background-image: url('dogs.jpg');
+  background-size: cover;
+  height: fit-content;
+}
 
-  .headerBackground {
-    background-color:coral;
-  }
+.headerBackground {
+  background-color:coral;
+}
 
-  header {
-    font-size: 100px;
-    color: white;
-    padding: 1%;
-    text-align: center;
-  }
-
-
-  
-  /* MENU BAR */
-  .header-navbar{
-    background-color: #2b2b2b;
-  }
-
-  .navbar {
-    color: #fefefe;
-    display: flex;
-  }
-
-  .navtext {
-    align-items: center;
-    display: flex;
-    padding: 0px 40px;
-    font-size: 30px;
-    margin-left: auto;
-  }
-
-  .navtext:hover {
-    background-color: #030303;
-    cursor: pointer;
-  }
-
-  a {
-    color: white;
-    text-decoration: none;  
-  }
-
-  .try {
-    display: flex;
-    justify-content: center;
-  }
-  
-  .code-wrapper {
-    background: #ffffff;
-    max-width: 100px;
-    border: 1px solid;
-    box-shadow: 2px 4px;
-    padding: 2px;
-    cursor: pointer;
-  }
-  
-  .container {
-    display: flex;
-    justify-content: center;
-    padding-top: 5%;
-  }
-  
-  .code-wrapper:active {
-      transform:translateX(2px) translateY(2px);
-      box-shadow: 1px 2px;
-  }
+header {
+  font-size: 140px;
+  color: white;
+  padding: 1%;
+}
 
 
-  /* DROPDOWN */
-
-  .dropdown .dropbtn {
-    font-size: 30px;
-    border: none;
-    outline: none;
-    color: white;
-    padding: 14px 16px;
-    background-color: inherit;
-    font-family: inherit;
-  }
-
-  .navbar a:hover, .dropdown:hover .dropbtn {
-    background-color: #030303;
-  }
-
-  .dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #f9f9f9;
-    min-width: 190px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
-  }
-
-  .dropdown-content a {
-    float: none;
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-    text-align: left;
-  }
-  
-  .dropdown-content a:hover {
-    background-color: #ddd;
-  }
-  
-  .dropdown:hover .dropdown-content {
-    display: block;
-  }
 
 
-  
+/* MENU BAR */
 
-  /* POST */
+.header-navbar{
+  background-color: #2b2b2b;
+}
 
-  img {
-    padding: 0;
-    margin: 0;
-    max-width: 400px;
-  }
+.navbar {
+  display: flex;
+}
 
-  .posts {
-    display: flex;
-    justify-content: center;
-  }
+.navtext {
+  align-items: center;
+  display: flex;
+  padding: 0px 20px;
+  font-size: 40px;
+  margin-right: auto;
+}
 
-  .newpost {
-    max-width: 400px;
-    background: #ffffff;
-    border: 1px solid;
-    box-shadow: 1px;
-    padding: 25px;
-  }
+.navtext:hover {
+  background-color: #030303;
+  cursor: pointer;
+}
 
-  .footer {
-    margin-top: 11%;
-    font-size: 20px;
-  }
+a {
+  color: white;
+  text-decoration: none; 
+}
+
+.try {
+display: flex;
+justify-content: center;
+}
+
+.code-wrapper {
+background: #ffffff;
+max-width: 100px;
+border: 1px solid;
+box-shadow: 2px 4px;
+padding: 2px;
+cursor: pointer;
+}
+
+.container {
+display: flex;
+justify-content: center;
+padding-top: 5%;
+}
+
+.code-wrapper:active {
+  transform:translateX(2px) translateY(2px);
+  box-shadow: 1px 2px;
+}
+
+.contact {
+  align-items: center;
+  display: flex;
+  padding: 0px 20px;
+  font-size: 40px;
+  margin-left: auto;
+}
+
+
+
+
+/* DROPDOWN */
+
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+.dropdown .dropbtn {
+  font-size: 40px;
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+
+.navbar a:hover, .dropdown:hover .dropbtn {
+  background-color: #030303;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 350px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #2b2b2b;
+  color: white;
+  text-align: center;
+  padding: 15px;
+}
+
+
+
+
+
+
+
+
+
+
+
