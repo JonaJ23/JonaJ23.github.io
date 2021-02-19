@@ -44,16 +44,30 @@
     text-decoration: none;  
   }
 
-  .contact {
-    align-items: center;
+  .try {
     display: flex;
-    padding: 0px 20px;
-    font-size: 30px;
-    margin-left: auto;
+    justify-content: center;
   }
-
-
-
+  
+  .code-wrapper {
+    background: #ffffff;
+    max-width: 100px;
+    border: 1px solid;
+    box-shadow: 2px 4px;
+    padding: 2px;
+    cursor: pointer;
+  }
+  
+  .container {
+    display: flex;
+    justify-content: center;
+    padding-top: 5%;
+  }
+  
+  .code-wrapper:active {
+      transform:translateX(2px) translateY(2px);
+      box-shadow: 1px 2px;
+  }
 
 
   /* DROPDOWN */
