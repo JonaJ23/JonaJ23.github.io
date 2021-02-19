@@ -1,77 +1,83 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <link rel="stylesheet" href="style.css">
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
+  </head>
+  <body>
     <div class="headerBackground"><header>DOGS</header></div>
 
-      <div class="header-navbar">
-        <nav class="navbar">
-          <a class="navtext" href="index.html">Start</a>
-          <a class="navtext" href="about.html">About us</a>
-          <div class="dropdown">
-            <button class="dropbtn">Social Media</button>
-            <div class="dropdown-content">
-              <a href="https://www.facebook.com/">Facebook</a>
-              <a href="https://twitter.com/">Twitter</a>
-              <a href="https://www.reddit.com/">Reddit</a>
-            </div>
+    <div class="header-navbar">
+      <nav class="navbar">
+        <a class="navtext" href="index.html">Start</a>
+        <a class="navtext" href="about.html">About us</a>
+        <div class="dropdown">
+          <div class="dropbtn">Social Media</div>
+          <div class="dropdown-content">
+            <a href="https://www.facebook.com/">Facebook</a>
+            <a href="https://twitter.com/">Twitter</a>
+            <a href="https://www.reddit.com/">Reddit</a>
           </div>
-          <a class="navtext" href="contact.html">Contact</a>
-        </nav>
-      </div>
+        </div>
+        <a class="navtext" href="contact.html">Contact</a>
+      </nav>
+    </div>
 
+    <div class="container">
       <div class="code-wrapper">
         <span class="code"></span>
-        <button onclick="javascript:void(0)" class="get-dog button">Fetch doggy!</button>
+        <div onclick="javascript:void(0)" class="get-dog button">
+          Fetch doggy!
+        </div>
       </div>
+    </div>
 
-      <div class="try">
-          <div class="image">
-            <h4>Image</h4>
-            <div class="image-content"></div>
-          </div>
+    <div class="try">
+      <div class="image">
+        <h4>Image</h4>
+        <div class="image-content"></div>
       </div>
+    </div>
 
-
-      
-
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" 
-      integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" 
-      crossorigin="anonymous">
-      </script>
-      <script>
-        if (typeof jQuery == 'undefined') {
-            document.write(unescape("%3Cscript src='/js/vendor/jquery-3.4.1.min.js' type='text/javascript'%3E%3C/script%3E"));
-        }
-      </script>
-      <script>
-        function getDog(){
-            $.getJSON("https://dog.ceo/api/breeds/image/random", function( data ) {
-                $(".json pre").html(JSON.stringify(data, null, 4));
-                $(".image-content").html("<img src='" + data.message + "'>");
-            });
-        }
-        $('.get-dog').click(function(){
-            getDog();
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"
+      integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      if (typeof jQuery == "undefined") {
+        document.write(
+          unescape(
+            "%3Cscript src='/js/vendor/jquery-3.4.1.min.js' type='text/javascript'%3E%3C/script%3E"
+          )
+        );
+      }
+    </script>
+    <script>
+      function getDog() {
+        $.getJSON("https://dog.ceo/api/breeds/image/random", function (data) {
+          $(".json pre").html(JSON.stringify(data, null, 4));
+          $(".image-content").html("<img src='" + data.message + "'>");
         });
+      }
+      $(".get-dog").click(function () {
+        getDog();
+      });
 
-        $(document).ready(function() {
-            getDog();
-        });
-      </script>
+      $(document).ready(function () {
+        getDog();
+      });
+    </script>
 
-
-
-
-
-      <footer><a class="footer" href="https://github.com/JonaJ23/JonaJ23.github.io">Github Repository</a></footer>
+    <footer>
+      <a class="footer" href="https://github.com/JonaJ23/JonaJ23.github.io"
+        >Github Repository</a
+      >
+    </footer>
 
     <script src="script.js"></script>
-</body>
+  </body>
 </html>
