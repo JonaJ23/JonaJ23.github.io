@@ -162,14 +162,19 @@ padding-top: 5%;
 
 /* ABOUT US */
 
-.about-container {
-  background-color: white;
-  text-align: center;
+.containerAbout {
+  display: flex;
+  justify-content: center;
+  padding-top: 5%;
 }
 
-
-
-
+.AboutUsText {
+  max-width: 400px;
+  background: #ffffff;
+  border: 1px solid;
+  box-shadow: 2px 4px;
+  padding: 25px;
+}
 
 
 
