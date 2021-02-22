@@ -178,6 +178,31 @@ padding-top: 5%;
 
 
 
+/* CONTACT */
+
+.containerContact-JJ {
+  display: flex;
+  justify-content: center;
+  padding-top: 5%;
+}
+
+.contactJonatan {
+  background: white;
+  box-shadow: 2px 4px;
+  padding: 10px;
+  padding-left: 50px;
+  border: 1px solid;
+  min-width: 450px;
+}
+
+
+
+
+
+
+
+
+/* FOOTER */
 
 .footer {
   position: fixed;
