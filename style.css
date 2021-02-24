@@ -217,9 +217,11 @@ border-radius: 10px;
   display: flex;
   justify-content: center;
   padding-top: 5%;
+  padding-bottom: 5%;
 }
 
-.contactJonatan {
+/* JONATAN CC */
+.contactCard-JJ {
   background: white;
   font-size: 20px;
   box-shadow: 2px 4px;
@@ -229,11 +231,33 @@ border-radius: 10px;
   min-width: 450px;
 }
 
-.contactJonatan > .number {
+.contactCard-JJ > .number-JJ {
   font-size: 30px;
 }
 
 
+/* STEFAN CC */
+
+.containerContact-SG {
+  display: flex;
+  justify-content: center;
+  padding-top: 5%;
+  padding-bottom: 5%;
+}
+
+.contactCard-SG {
+  background: white;
+  font-size: 20px;
+  box-shadow: 2px 4px;
+  padding: 10px;
+  padding-left: 50px;
+  border: 1px solid;
+  min-width: 450px;
+}
+
+.contactCard-SG > .number-SG {
+  font-size: 30px;
+}
 
 
 /* FOOTER */
