@@ -45,30 +45,23 @@
         </div>
     </div>
 
-
+    <!-- Cdnjs (Content Delivery Network w/javascript) is an open-source software hosted by Cloudfare
+        to offer quicker and easier loading times for all the files on a website. -->
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"
       integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
       crossorigin="anonymous"
     ></script>
 
-    <script>
-      if (typeof jQuery == "undefined") {
-        document.write(
-          unescape(
-            "%3Cscript src='/js/vendor/jquery-3.4.1.min.js' type='text/javascript'%3E%3C/script%3E"
-          )
-        );
-      }
-    </script>
-
 
     <!-- GET DOG-API -->   
     <script>
     function getDog() {
       let selectedDog=$(".dog-selector option:selected").val();
-      dogURL=selectedDog.replace(/-/g,'/');$.getJSON("https://dog.ceo/api/breed/" +dogURL+ "/images/random",
+      dogURL=selectedDog.replace(/-/g,'/');
+      $.getJSON("https://dog.ceo/api/breed/" +dogURL+ "/images/random",
       function(result){$(".dog-image").html("<img src='" +result.message+ "'>");});
+
     }
       function loadDogs() {
       $.getJSON("https://dog.ceo/api/breeds/list/all",
