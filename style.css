@@ -55,7 +55,7 @@ a {
 
 /* FETCH DOG CONTAINER */
 
-.fetch-button {
+.get-dog-button {
   text-align: center;
   font-size: 30px;
   background-color: rgb(148, 21, 21);
@@ -67,8 +67,9 @@ a {
   border-radius: 5px;
 }
 
-.fetch-button:hover {
+.get-dog-button:hover {
   background-color: rgb(78, 13, 13);
+  cursor: pointer;
 }
 
 
