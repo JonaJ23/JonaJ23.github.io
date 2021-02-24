@@ -44,7 +44,7 @@
         </div>
     </div>
 
-    
+
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"
       integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
@@ -65,13 +65,13 @@
     <!-- GET DOG-API -->   
     <script>
     function getDog() {
-      var selectedDog=$(".dog-selector option:selected").val();
+      let selectedDog=$(".dog-selector option:selected").val();
       dogURL=selectedDog.replace(/-/g,'/');$.getJSON("https://dog.ceo/api/breed/" +dogURL+ "/images/random",
       function(result){$(".dog-image").html("<img src='" +result.message+ "'>");});
     }
       function loadDogs() {
       $.getJSON("https://dog.ceo/api/breeds/list/all",
-      function(result){var breeds=result.message;
+      function(result){let breeds=result.message;
         firstDog=Object.keys(breeds)[0];
         $.each(breeds,function(dog,breed) {
 
