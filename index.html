@@ -29,27 +29,28 @@
       </nav>
     </div>
 
+
+    <div class="fetch-button">
+      <a href="javascript:void(0);" class="get-dog button">Fetch doggy!</a>
+    </div>
     <div class="container">
-      <div class="code-wrapper">
-        <span class="code"></span>
-        <div onclick="javascript:void(0)" class="get-dog button">
-          Fetch doggy!
+      <div>
+        <div class="code-wrapper">
+        <span class="code"><select class="dog-selector">
+        </select>
+        </span>
         </div>
-      </div>
+        <div class="dog-image"></div>
+        </div>
     </div>
 
-    <div class="try">
-      <div class="image">
-        <br>
-        <div class="image-content"></div>
-      </div>
-    </div><br><br>
-
+    
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"
       integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
       crossorigin="anonymous"
     ></script>
+
     <script>
       if (typeof jQuery == "undefined") {
         document.write(
@@ -59,24 +60,54 @@
         );
       }
     </script>
-    <script>
-      function getDog() {
-        $.getJSON("https://dog.ceo/api/breeds/image/random", function (data) {
-          $(".json pre").html(JSON.stringify(data, null, 4));
-          $(".image-content").html("<img src='" + data.message + "'>");
-        });
-      }
-      $(".get-dog").click(function () {
-        getDog();
-      });
 
-      $(document).ready(function () {
-        getDog();
+
+    <!-- GET DOG-API -->   
+    <script>
+    function getDog() {
+      var selectedDog=$(".dog-selector option:selected").val();
+      dogURL=selectedDog.replace(/-/g,'/');$.getJSON("https://dog.ceo/api/breed/" +dogURL+ "/images/random",
+      function(result){$(".dog-image").html("<img src='" +result.message+ "'>");});
+    }
+      function loadDogs() {
+      $.getJSON("https://dog.ceo/api/breeds/list/all",
+      function(result){var breeds=result.message;
+        firstDog=Object.keys(breeds)[0];
+        $.each(breeds,function(dog,breed) {
+
+        if(breeds[dog].length>=1) {
+          for(i=0;i<breeds[dog].length;i++)
+
+      {$(".dog-selector").append('<option value="' +dog+ '-' +breeds[dog][i]+ '">' +breeds[dog][i]+ ' ' +dog+ '</option>');
+      }
+    }
+
+      else if(breeds[dog].length<1){$(".dog-selector").append('<option value="' +dog+ '">'+dog+'</option>');
+      }
+    });
+      $.getJSON("https://dog.ceo/api/breed/" + firstDog + "/images/random",
+      function(result){$(".dog-image").html("<img src='" + result.message + "'>");
       });
+    });
+    }
+      $(".dog-selector").change(function() {
+        $(".dog-selector option:selected").each(function() 
+        {getDog();
+        });
+      });
+      $(".get-dog").click(function(){getDog();
+      });$(document).ready(function(){loadDogs();
+    });
     </script>
+
+
     <footer><br><br>
       <a class="footer" href="https://github.com/JonaJ23/JonaJ23.github.io"
         >Github Repository</a>
     </footer>
   </body>
 </html>
+
+
+
+
