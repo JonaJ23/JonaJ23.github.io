@@ -60,9 +60,9 @@
       let selectedDog=$(".dog-selector option:selected").val();
       dogURL=selectedDog.replace(/-/g,'/');
       $.getJSON("https://dog.ceo/api/breed/" +dogURL+ "/images/random",
-      function(result){$(".dog-image").html("<img src='" +result.message+ "'>");});
-
-    }
+      function(result){$(".dog-image").html("<img src='" +result.message+ "'>");
+    });};
+    
       function loadDogs() {
       $.getJSON("https://dog.ceo/api/breeds/list/all",
       function(result){let breeds=result.message;
@@ -73,9 +73,8 @@
           for(i=0;i<breeds[dog].length;i++)
 
       {$(".dog-selector").append('<option value="' +dog+ '-' +breeds[dog][i]+ '">' +breeds[dog][i]+ ' ' +dog+ '</option>');
-      }
+      };
     }
-
       else if(breeds[dog].length<1){$(".dog-selector").append('<option value="' +dog+ '">'+dog+'</option>');
       }
     });
