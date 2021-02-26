@@ -45,6 +45,11 @@
         </div>
     </div>
 
+
+
+
+    <!-- JAVASCRIPT -->
+
     <!-- Cdnjs (Content Delivery Network w/javascript) is an open-source software hosted by Cloudfare
         to offer quicker and easier loading times for all the files on a website. -->
     <script
@@ -54,15 +59,17 @@
     ></script>
 
 
-    <!-- GET DOG-API -->   
+    <!-- FETCH DOG -->
+    <!-- With jQuery the selected breed (value) of dog get JSON data using an AJAX HTTP GET request in order to fetch the breed list from it's API.
+       The selected breed will load a randomized image from it's library for every new request with the fetching button. -->   
     <script>
     function getDog() {
       let selectedDog=$(".dog-selector option:selected").val();
       dogURL=selectedDog.replace(/-/g,'/');
       $.getJSON("https://dog.ceo/api/breed/" +dogURL+ "/images/random",
       function(result){$(".dog-image").html("<img src='" +result.message+ "'>");
-    });};
-    
+    })};
+  
       function loadDogs() {
       $.getJSON("https://dog.ceo/api/breeds/list/all",
       function(result){let breeds=result.message;
@@ -82,7 +89,7 @@
       function(result){$(".dog-image").html("<img src='" + result.message + "'>");
       });
     });
-    }
+    };
       $(".dog-selector").change(function() {
         $(".dog-selector option:selected").each(function() 
         {getDog();
@@ -92,6 +99,7 @@
       });$(document).ready(function(){loadDogs();
     });
     </script>
+
 
 
     <!-- FOOTER -->
