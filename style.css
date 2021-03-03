@@ -72,7 +72,22 @@ a {
   cursor: pointer;
 }
 
+.get-dogInfo {
+  text-align: center;
+  font-size: 30px;
+  background-color: rgb(148, 21, 21);
+  margin-top: 50px;
+  max-width: 180px;
+  margin: auto;
+  margin-top: 55px;
+  padding: 10px;
+  border-radius: 5px;
+}
 
+.get-dogInfo:hover {
+  background-color: rgb(78, 13, 13);
+  cursor: pointer;
+}
 /* FETCH DOG CONTAINER */
 
 .container {
