@@ -97,6 +97,13 @@ a {
   padding-bottom: 3%;
 }
 
+.container2 {
+  display: flex;
+  justify-content: center;
+  padding-top: 1%;
+  padding-bottom: 3%;
+}
+
 .code-wrapper {
 background: #2b2b2b;
 color: white;
@@ -106,6 +113,17 @@ padding: 15px;
 text-align: center;
 border-radius: 10px;
 }
+
+.code-wrapper2 {
+  background: #2b2b2b;
+  color: white;
+  font-size: 18px;
+  min-width: 100px;
+  max-width: 500px;
+  padding: 15px;
+  text-align:left;
+  border-radius: 10px;
+  }
 
 .dog-selector {
   font-family: 'Franklin Gothic Medium';
